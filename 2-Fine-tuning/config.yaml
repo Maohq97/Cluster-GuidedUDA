@@ -1,0 +1,29 @@
+save_path: ./results
+train_list_vox2: ./dirs/train_list_vox2.txt
+train_path_vox2: /media/hf/ssdD/dataset/mrp_data_dir/vox2_wav/vox2_aac/dev/aac
+train_list: ./dirs/train_list_cn1_5s.txt
+train_path: /media/hf/ssdE/mhq/dataset/New_cn_celeb1/CN_Celeb_wav/data
+musan_path: /media/hf/ssdE/mhq/dataset/mrp_noise/musan_split
+rir_path: /media/hf/ssdE/mhq/dataset/mrp_noise/noise_dir/simulated_rirs
+eval_list: ./dirs/cnceleb1_eval.txt
+eval_path: /media/hf/ssdE/mhq/dataset/CN_Celeb12/cn_celeb1/CN_Celeb_wav/eval
+num_frames: 200 # Duration of the input segments, eg: 200 for 2 seconds
+batch_size_1: 64 # Batch size for labeled Vox2
+batch_size_2: 128 # Batch size for unlabeled CN1
+n_thread: 16 # Number of loader threads
+n_class: 5994 # Number of speakers for Vox2
+C: 1024 # Channel size for the speaker network
+m: 0.2 # Loss margin in AAM softmax
+s: 30 # Loss scale in AAM softmax
+lr: 0.001 # Learning rate
+step_size: 1 # scheduler step size
+weight_decay: 2e-5 # Weight decay
+test_step: 5 # Test and save every [test_step] epochs
+lr_decay: 0.95 # Learning rate decay every [test_step] epochs
+n_epoch: 600 # Number of total epochs
+eer_threshod: 11.0 # EER threshold for saving model
+cluster_K: 800 # Total clustering number
+alpha: 1.0 # Weight of speaker classification loss
+beta: 1.0 # Weight of contrastive loss
+gamma: 1.0 # Weight of contrastive center loss
+initial_model: './pre_model/model_32.pt' # Pre-trained model
