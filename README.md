@@ -23,6 +23,7 @@ Target domain data: [CN-Celeb1](http://www.openslr.org/82/) (Chinese, 797 speake
 Here is a brief introduction of the experimental results for this part. More details can be seen in the [original paper](https://arxiv.org/abs/2303.15944).
 
 ### Baseline
+
 $$
 \text{Table 1} \space \space \text{Results on CN-Celeb1 without domain adaptation}
 $$
@@ -31,7 +32,7 @@ $$
 \begin{array}
 {ccc}
 \hline
-	\text{Training data} & \text{Training Mode} & \text{EER(%)} \\
+	\text{Training data} & \text{Training Mode} & \text{EER} \\
 \hline
 	\text{VoxCeleb2} & \text{Supervised} & 13.40 \\
 	\text{CN-Celeb1} & \text{Supervised} & 11.04 \\
@@ -47,11 +48,14 @@ Due to the domain mismatch, the result of supervised training on VoxCeleb2 is un
 We tested the EER performance of different models on the CN-Celeb1 evaluation set. Besides, we used the obtained models to extract embeddings of all the CN-Celeb1 training data, followed by  $k$-means clustering with $K=800$, which means the total number of clusters.
 
 $$
-\text{Table 2} \space \space \text{EER and clustering performance of different models} \\
+\text{Table 2} \space \space \text{EER and clustering performance of different models}
+$$
+
+$$
 \begin{array}
 {cccc}
 \hline
-	\text{Model} & \text{EER(\%)} & \text{Purity} & \text{NMI}\\ 
+	\text{Model} & \text{EER} & \text{Purity} & \text{NMI}\\ 
 \hline
 	\text{Pre-trained} & 10.30 & 0.786 & 0.875\\
 	\text{Fine-tuned}  & 9.48  & 0.829 & 0.898\\
@@ -61,9 +65,9 @@ $$
 
 We further analyzed the variations of EER and NMI during the fine-tuning process. We estimated the total number of clusters as 300, 480, and 700, respectively, and conducted several independent fine-tuning experiments.
 
-<img src=".\imgs\EER-CN1.png" alt="EER-CN1" style="zoom:5%;" />
+<img src=".\imgs\EER-CN1.png" width="40%">
 
-<img src=".\imgs\NMI-CN1.png" alt="NMI-CN1" style="zoom:5%;" />
+<img src=".\imgs\NMI-CN1.png" width="40%">
 
 The fine-tuning process can improve both recognition performance (EER) and clustering performance (NMI), and such improvements are less affected by the misestimation of the number of clusters.
 
@@ -75,10 +79,13 @@ We varied the number of clusters $K$ to explore its effect on the proposed metho
 
 $$
 \text{Table 3} \space \space \text{Supervised results on the combined dataset} \\
+$$
+
+$$
 \begin{array}
 {ccc}
 \hline
-	\text{Training data} & \text{Training Mode} & \text{EER(\%)} \\
+	\text{Training data} & \text{Training Mode} & \text{EER} \\
 \hline
 	\text{Vox2+CN1}           & \text{Supervised} & 8.05 \\
 	\text{Vox2+CN1.U(K=400)}  & \text{Supervised} & 8.38 \\
@@ -103,14 +110,17 @@ The aidatatang_200zh dataset contains 200 hours of acoustic data from 600 speake
 ### Baseline
 
 $$
-\text{Table 4} \space \space \text{Results on aidatatang\_200zh without domain adaptation} \\
+\text{Table 4} \space \space \text{Results on aidatatang200zh without domain adaptation} \\
+$$
+
+$$
 \begin{array}
 {ccc}
 \hline
-	\text{Training Data} & \text{Training Mode} & \text{EER(\%)} \\
+	\text{Training Data} & \text{Training Mode} & \text{EER} \\
 \hline
 	\text{VoxCeleb2}         & \text{Supervised} & 10.30 \\
-	\text{aidatatang\_200zh} & \text{CSL}        & 4.47  \\
+	\text{aidatatang200zh} & \text{CSL}        & 4.47  \\
 \hline	
 \end{array}
 $$
@@ -121,10 +131,13 @@ We tested the EER performance of different models on the aidatatang_200zh evalua
 
 $$
 \text{Table 5} \space \space \text{EER and clustering performance of different models} \\
+$$
+
+$$
 \begin{array}
 {cccc}
 \hline
-	\text{Model} & \text{EER(\%)} & \text{Purity} & \text{NMI}\\ 
+	\text{Model} & \text{EER} & \text{Purity} & \text{NMI}\\ 
 \hline
 	\text{Pre-trained} & 4.28 & 0.770 & 0.951\\
 	\text{Fine-tuned}  & 4.13 & 0.809 & 0.958\\
@@ -134,9 +147,9 @@ $$
 
 Similarly, we analyzed the variations of EER and NMI during the fine-tuning process.  The total number of clusters was estimated to be 300, 480, and 700, respectively.
 
-<img src=".\imgs\EER-adt.png" alt="EER-adt" style="zoom:7%;" />
+<img src=".\imgs\EER-adt.png" width="40%">
 
-<img src=".\imgs\NMI-adt.png" alt="NMI-adt" style="zoom:7%;" />
+<img src=".\imgs\NMI-adt.png" width="40%">
 
 Fine-tuning can effectively improve the model recognition performance as well as the clustering quality, and it also brings a stable improvement even when the total number of clusters deviates from the true value.
 
@@ -146,10 +159,13 @@ The supervised results on the combined dataset are listed below, where "aidatata
 
 $$
 \text{Table 6} \space \space \text{Supervised results on the combined dataset} \\
+$$
+
+$$
 \begin{array}
 {ccc}
 \hline
-	\text{Training Data} & \text{Training Mode} & \text{EER(\%)} \\
+	\text{Training Data} & \text{Training Mode} & \text{EER} \\
 \hline
 	\text{Vox2+aidatatang}           & \text{Supervised} & 3.15 \\
 	\text{Vox2+aidatatang.U(K=300)}  & \text{Supervised} & 3.18 \\
