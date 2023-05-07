@@ -23,13 +23,15 @@ Target domain data: [CN-Celeb1](http://www.openslr.org/82/) (Chinese, 797 speake
 Here is a brief introduction of the experimental results for this part. More details can be seen in the [original paper](https://arxiv.org/abs/2303.15944).
 
 ### Baseline
+$$
+\text{Table 1} \space \space \text{Results on CN-Celeb1 without domain adaptation}
+$$
 
 $$
-\text{Table 1} \space \space \text{Results on CN-Celeb1 without domain adaptation} \\
 \begin{array}
 {ccc}
 \hline
-	\text{Training data} & \text{Training Mode} & \text{EER(\%)} \\
+	\text{Training data} & \text{Training Mode} & \text{EER(%)} \\
 \hline
 	\text{VoxCeleb2} & \text{Supervised} & 13.40 \\
 	\text{CN-Celeb1} & \text{Supervised} & 11.04 \\
@@ -45,8 +47,7 @@ Due to the domain mismatch, the result of supervised training on VoxCeleb2 is un
 We tested the EER performance of different models on the CN-Celeb1 evaluation set. Besides, we used the obtained models to extract embeddings of all the CN-Celeb1 training data, followed by  $k$-means clustering with $K=800$, which means the total number of clusters.
 
 $$
-\text{Table 2} \space \space \text{EER and clustering performance of different models} 
-\\
+\text{Table 2} \space \space \text{EER and clustering performance of different models} \\
 \begin{array}
 {cccc}
 \hline
