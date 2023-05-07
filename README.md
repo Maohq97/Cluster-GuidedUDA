@@ -107,7 +107,7 @@ Source domain data: [VoxCeleb2](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/v
 
 Target domain data: [aidatatang_200zh](http://www.openslr.org/62/) (Chinese, 480 speakers)
 
-To demonstrate that the proposed method works not only on Cn-Celeb1 but also on other datasets, we have conducted experiments on aidatatang_200zh, a Chinese Mandarin speech corpus. Due to the page limitation of the submitted journal, we show experimental results for this part here, rather than in the original paper.
+To demonstrate that the proposed method works not only on CN-Celeb1 but also on other datasets, we have conducted experiments on aidatatang_200zh, a Chinese Mandarin speech corpus. Due to the page limitation of the submitted journal, we show experimental results for this part here, rather than in the original paper.
 
 The aidatatang_200zh dataset contains 200 hours of acoustic data from 600 speakers. In our experiment, we used 480 speakers for training and 120 speakers for evaluation. For each speaker in the evaluation set, the utterance with the longest duration is selected as the enrollment utterance, and the remaining  parts are used as the test utterances. The trial list contains 5,762,877 trial pairs in total.
 
