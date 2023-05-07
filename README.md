@@ -43,6 +43,7 @@ Due to the domain mismatch, the result of supervised training on VoxCeleb2 is un
 ### The Effectiveness of the Fine-tuned Model for Clustering
 
 We tested the EER performance of different models on the CN-Celeb1 evaluation set. Besides, we used the obtained models to extract embeddings of all the CN-Celeb1 training data, followed by  $k$-means clustering with $K=800$, which means the total number of clusters.
+
 $$
 \text{Table 2} \space \space \text{EER and clustering performance of different models} \\
 \begin{array}
@@ -55,6 +56,7 @@ $$
 \hline	
 \end{array}
 $$
+
 We further analyzed the variations of EER and NMI during the fine-tuning process. We estimated the total number of clusters as 300, 480, and 700, respectively, and conducted several independent fine-tuning experiments.
 
 <img src=".\imgs\EER-CN1.png" alt="EER-CN1" style="zoom:5%;" />
@@ -68,6 +70,7 @@ The fine-tuning process can improve both recognition performance (EER) and clust
 To perform domain adaptation, the labeled source domain data are combined with the pseudo-labeled target domain data, and the total number of classes is their sum. Finally, a new speaker embedding network is trained with a classification layer and cross-entropy loss on the combined dataset.
 
 We varied the number of clusters $K$ to explore its effect on the proposed method. The results are shown in the table below, where "CN1" means the CN-Celeb1 training data with true labels and "CN1.U" means these training data with pseudo labels.
+
 $$
 \text{Table 3} \space \space \text{Supervised results on the combined dataset} \\
 \begin{array}
@@ -82,6 +85,7 @@ $$
 \hline	
 \end{array}
 $$
+
 The supervised training on the combined dataset brings significant performance improvement even when the number of clusters deviates from the true one. Besides, the result ($K$=800) is even close to the upper bound performance when the actual labels of the target domain data are available.
 
 ## VoxCeleb2 - aidatatang_200zh
@@ -112,6 +116,7 @@ $$
 ### The Effectiveness of the Fine-tuned Model for Clustering
 
 We tested the EER performance of different models on the aidatatang_200zh evaluation set.  The obtained models are used to extract embeddings of all the aidatatang_200zh training data, followed by $k$-means clustering with $K=480$.  
+
 $$
 \text{Table 5} \space \space \text{EER and clustering performance of different models} \\
 \begin{array}
@@ -124,6 +129,7 @@ $$
 \hline	
 \end{array}
 $$
+
 Similarly, we analyzed the variations of EER and NMI during the fine-tuning process.  The total number of clusters was estimated to be 300, 480, and 700, respectively.
 
 <img src=".\imgs\EER-adt.png" alt="EER-adt" style="zoom:7%;" />
@@ -135,6 +141,7 @@ Fine-tuning can effectively improve the model recognition performance as well as
 ### Supervised results on the combined dataset
 
 The supervised results on the combined dataset are listed below, where "aidatatang" means the aidatatang_200zh training data with true labels and "aidatatang.U" means these data with pseudo labels.
+
 $$
 \text{Table 6} \space \space \text{Supervised results on the combined dataset} \\
 \begin{array}
