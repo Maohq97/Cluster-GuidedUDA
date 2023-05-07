@@ -65,9 +65,13 @@ $$
 
 We further analyzed the variations of EER and NMI during the fine-tuning process. We estimated the total number of clusters as 300, 480, and 700, respectively, and conducted several independent fine-tuning experiments.
 
+<div align=center>
 <img src=".\imgs\EER-CN1.png" width="40%">
+<div>
 
+<div align=center>
 <img src=".\imgs\NMI-CN1.png" width="40%">
+<div>
 
 The fine-tuning process can improve both recognition performance (EER) and clustering performance (NMI), and such improvements are less affected by the misestimation of the number of clusters.
 
@@ -147,9 +151,13 @@ $$
 
 Similarly, we analyzed the variations of EER and NMI during the fine-tuning process.  The total number of clusters was estimated to be 300, 480, and 700, respectively.
 
+<div align=center>
 <img src=".\imgs\EER-adt.png" width="40%">
+<div>
 
+<div align=center>
 <img src=".\imgs\NMI-adt.png" width="40%">
+<div>
 
 Fine-tuning can effectively improve the model recognition performance as well as the clustering quality, and it also brings a stable improvement even when the total number of clusters deviates from the true value.
 
