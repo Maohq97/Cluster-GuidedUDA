@@ -63,7 +63,7 @@ $$
 \end{array}
 $$
 
-We further analyzed the variations of EER and NMI during the fine-tuning process. We estimated the total number of clusters as 300, 480, and 700, respectively, and conducted several independent fine-tuning experiments.
+We further analyzed the variations of EER and NMI during the fine-tuning process. We estimated the total number of clusters as 400, 800, and 1600, respectively, and conducted several independent fine-tuning experiments.
 
 <div align=center>
 <img src=".\imgs\EER-CN1.png" width="40%">
