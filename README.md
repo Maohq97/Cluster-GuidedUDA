@@ -45,7 +45,8 @@ Due to the domain mismatch, the result of supervised training on VoxCeleb2 is un
 We tested the EER performance of different models on the CN-Celeb1 evaluation set. Besides, we used the obtained models to extract embeddings of all the CN-Celeb1 training data, followed by  $k$-means clustering with $K=800$, which means the total number of clusters.
 
 $$
-\text{Table 2} \space \space \text{EER and clustering performance of different models} \\
+\text{Table 2} \space \space \text{EER and clustering performance of different models} 
+\\
 \begin{array}
 {cccc}
 \hline
